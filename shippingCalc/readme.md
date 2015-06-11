@@ -8,25 +8,18 @@ PHP, MySQLi, jQuery/Bootstrap, AJAX
 Installation -
 I designed this application using the XAMPP control panel (https://www.apachefriends.org/) in order to create an apache and MySQL PHPmyAdmin modules. 
 After installing XAMPP control panel (or your preferred apache and MySQL PHPmyAdmin servers) the following steps can be used to view the application:
-1) Download the application folder
-2) PHPmyAdmin configuration details may need to be applied in order to match a PHPmyAdmin user.
-3) Navigate to the XAMPP directory (Located at /xampp/htdocs) and extract the folder to this location
-4) You can now access the application with the URL "http://localhost/ShippingCalc/index.html"
+1) Download the repository and configure a virtual host
+2) Create a DB and user, then run initDB.sql
+3) Navigate to the URL you configured in step 1
 
 Using the Application -
-*Due to non-functioning jQuery in the script.js file, ONLY the bottom portion of the application functions.*
--------------------------------------------------------------
-Non-functioning Top Portion
 Users are initially presented with a navigation bar allowing them to select Home, About, or Contact.
-On the Home page allows the user to create the database (which would perform several php files in succession).
-After the database is created, that view is no longer displayed and is replaced with a view prompting the user to select a ZIP code, and a Package Weight from two selections.
-Once selections have been made, the user can calculate the cost. The result would be displayed on a third view, with the option to ship another package.
--------------------------------------------------------------
-Functioning Bottom Portion
-The bottom portion of the application page presents the user with 5 buttons (Create DB, Create ZWC Table, Create ZZ Table, Populate ZWC Table, and Populate ZZ Table)
-These five buttons must be performed in order or else the database will not be created or populated with the correct information.
-Following the creation and population of the database, the user can select a Zip Code, and a Package Weight. 
-Once selections have been made, the user can calculate the cost, the result is displayed in a new page.
+The first view on Home page allows the user to create the database. This step is superfluous since the installation steps above create and populate the database.
+After the database is created, the initial view is no longer displayed and is replaced with a view prompting the user to select a ZIP code, and a Package Weight from two selections.
+Once selections have been made, the user can press the 'Calculate' button. The second view is replaced, and the resulting cost is displayed on a third view, with the option to ship another package, returning the user to the second view.
 
 Wishlist -
-Have the jQuery function correctly. Hiding and showing the appropriate views, displaying the results to the user without requiring a new page, and general user improvements on the front end.
+I would like to expand upon the selections available to the user, providing options for the user to input invalid selections for the ZIP and weight.
+Additional logic for responding to the user why certain selections are unavailable.
+Interested in stylistically formatting the css to prevent small shifts in the manner that the page is displayed.
+Investigating a bit more into what the best practice may be for creating and populating a database and when the scripts should be called for database creation.
