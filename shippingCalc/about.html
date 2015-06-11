@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="description" content="Shipping Calculator built in PHP, using MySQLi, AJAX, and jQuery">
+		<meta name="author" content="Matt Koob">
+		
+		<title>Too Calculated</title>
+		
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		
+		 <!-- Custom styles for this template -->
+		<link href="stylesheet.css" rel="stylesheet">
+		
+		<!--<link rel='stylesheet' type='text/css' href='stylesheet.css'/>-->
+		<script type='text/javascript' src='script.js'></script>
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+	</head>
+	<body>
+	 <div class="container">
+		<div class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills pull-right">
+					<li role="presentation"><a href="index.html">Home</a></li>
+					<li role="presentation" class="active"><a href="about.html">About</a></li>
+					<li role="presentation"><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<h3 class="text-muted">Too Calculated - About</h3>
+		</div>
+		
+		 <div class="row marketing">
+			<div class="col-lg-6">
+			<h4>About</h4>
+			<p>This application is used to calculate the shipping costs for particular zip code and weight combinations. It queries two tables within a database to first analyze which zone the selected zip code corresponds to, and second to provide with the correct cost based on a zone and weight combination.
+			The top portion of the home page is stylistically close to what I desired, however is not functional.
+				The bottom portion of the home page is functional, yet stylistically cringe-worthy. Five separate forms must be submitted (in order) so that the database and given tables can be created, and populated using individual PHP files. 
+					Next, a ZIP code and a package weight can be selected (from a selection based on the appropriate data) and the cost can be returned after the submit button is pressed.
+					Unfortunately the result is displayed on a new page, rather than displayed on the same page without a page load.
+			</p>
+			</div>
+		  </div>
+		<footer class="footer"></footer>
+	  </div> 
+	</body>
+</html>
