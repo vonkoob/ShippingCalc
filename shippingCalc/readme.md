@@ -1,5 +1,5 @@
 TooCalculated -
-TooCalculated is a PHP application that allows users to see what the shipping cost for their package would be based on their destination ZIP and package weight.
+TooCalculated is a PHP application that allows users to see what the shipping cost for their package would be based on their destination ZIP code and package weight.
 The application is designed to be a single page application with visual appeal for the user.
 
 Application Stack -
@@ -22,4 +22,4 @@ Wishlist -
 I would like to expand upon the selections available to the user, providing options for the user to input invalid selections for the ZIP and weight.
 Additional logic for responding to the user why certain selections are unavailable.
 Interested in stylistically formatting the css to prevent small shifts in the manner that the page is displayed.
-Investigating a bit more into what the best practice may be for creating and populating a database and when the scripts should be called for database creation.
+Investigating a bit more into what the best practices are for creating and populating a database and when the scripts should be called for database creation.
