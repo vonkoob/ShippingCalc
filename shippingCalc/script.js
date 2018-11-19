@@ -1,18 +1,25 @@
 $(document).ready(function() {
 	
-	$("#jumbo2").hide();
+
+
 	$("#jumbo3").hide();
-	
+	// $("#jumbo2").hide();
+
 	$("#dbcreation").click(function() {
-		$("#jumbo1").hide();
-		$("#jumbo2").show();
+			$.ajax({
+				method: 'POST',
+				url: "mainscript.php",
+				success: function success() {
+					location.reload();
+//					alert('success');
+				},
+				error: function error() {
+					alert('failure');
+				}
+			})
 	});
 	
 	$("#calcSubmit").click(function() {
-		$("#jumbo2").hide();
-		$("#jumbo3").show();
-		
-		
 	});
 	
 	$("#shipagain").click(function() {
@@ -32,27 +39,8 @@ $(document).ready(function() {
 				},
 				success: function(data){
 					$("#costresult").html(data);
-				}
-			});
-		return false; //required to block normal submit since i've used ajax
-		}
-	});
-
-	$('#dbcreation').validate({
-		submitHandler: function (form) {
-			$.ajax({
-				type: 'POST',
-				url: "mainscript.php",
-				success:success
-			})
-			.done(function (response) {
-				if (response.success == 'success')
-				{
-					alert('success');
-				}
-				else
-				{
-					alert('fail');
+					$("#jumbo2").hide();
+					$("#jumbo3").show();
 				}
 			});
 		return false; //required to block normal submit since i've used ajax

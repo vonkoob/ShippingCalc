@@ -3,13 +3,12 @@
 include('database.php');
 
 if ( isset($_POST['zipVal']) ) {
-//echo $_POST['zipVal'] . "<br/>";
 }
 
 $zipVar = $_POST['zipVal'];
 $zoneVar = "";
 
-$sql = "SELECT zone, zip FROM zipZone WHERE zip = $zipVar";
+$sql = "SELECT zone, zip FROM zipzone WHERE zip = $zipVar";
 $results = $conn->query($sql);
 
 if ($results->num_rows > 0) {
@@ -21,7 +20,6 @@ if ($results->num_rows > 0) {
 		//echo "0 results";
 	}	
 
-//echo $zoneVar . "<br/>";
 	
 if ( isset($_POST['weightVal']) ) {
 //echo $_POST['weightVal'] . "<br/>";
@@ -42,9 +40,6 @@ if ($results->num_rows > 0) {
 		}
 	} else {
 		echo "We're sorry, but this package is unacceptable.";
-	}
-
-//echo "Shipping this package would cost : $" . $costVar . "<br/>";
-	
+	}	
 $conn->close();
 ?>
